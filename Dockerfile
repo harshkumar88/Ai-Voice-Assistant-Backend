@@ -1,10 +1,14 @@
 FROM python:3.9-slim
 
-# Install system deps
+# Install system deps (gcc, portaudio for PyAudio, espeak for pyttsx3)
 RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    make \
+    libportaudio2 \
+    portaudio19-dev \
     espeak \
     espeak-ng \
-    portaudio19-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Set workdir
