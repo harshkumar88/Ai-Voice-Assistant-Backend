@@ -1,0 +1,12 @@
+*pyc
+*/migrations/*.py
+*/*/local_settings.py
+.idea/
+*__pycache__
+
+.DS_Store
+
+local_settings.py
+
+.env
+/venv
