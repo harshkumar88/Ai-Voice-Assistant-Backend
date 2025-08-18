@@ -59,16 +59,17 @@ CORS_ALLOW_HEADERS = (
     'contentType',
     '*'
 )
+
+
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
+    "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://ai-voice-assistant-frontend.onrender.com"
+    "https://ai-voice-assistant-frontend.onrender.com",
 ]
 
+# ✅ Regex for all onrender.com subdomains (optional)
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    '^(http?://)?(\w+\.)?onrender\.com$',
-    '^(https?://)?(\w+\.)?onrender\.com$',
-    '^(http?://)?(\w+\.)?web\.onrender\.com$'
+    r"^https?:\/\/([a-zA-Z0-9-]+\.)?onrender\.com$",
 ]
 
 INSTALLED_APPS = [
@@ -86,14 +87,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     # 'AiVoice.ThirdParty.Authentication.ApplyAuth.LoginRequiredMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 
 ]
 
