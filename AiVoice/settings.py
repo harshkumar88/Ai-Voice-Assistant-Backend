@@ -68,11 +68,9 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    '^(http?://)?(\w+\.)?crofarm\.com$',
-    '^(https?://)?(\w+\.)?crofarm\.com$',
-    'google.com',
-    'erp.crofarm.com',
-    '^(http?://)?(\w+\.)?web\.crofarm\.com$'
+    '^(http?://)?(\w+\.)?onrender\.com$',
+    '^(https?://)?(\w+\.)?onrender\.com$',
+    '^(http?://)?(\w+\.)?web\.onrender\.com$'
 ]
 
 INSTALLED_APPS = [
@@ -97,7 +95,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'AiVoice.urls'
