@@ -42,11 +42,9 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_REGEX_WHITELIST = (
-    '^(http?://)?(\w+\.)?crofarm\.com$',
-    '^(https?://)?(\w+\.)?crofarm\.com$',
-    'google.com',
-    'erp.crofarm.com',
-    '^(http?://)?(\w+\.)?web\.crofarm\.com$'
+    '^(http?://)?(\w+\.)?onrender\.com$',
+    '^(https?://)?(\w+\.)?onrender\.com$',
+    '^(http?://)?(\w+\.)?web\.onrender\.com$'
 )
 CORS_ALLOW_HEADERS = (
     'x-requested-with',
