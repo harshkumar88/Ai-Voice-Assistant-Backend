@@ -29,14 +29,7 @@ ALLOWED_HOSTS = ["*"]
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ALLOW_METHODS = (
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS'
-)
+CORS_ALLOW_METHODS= ["*"]
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'AiVoice.BaseClasses.ApiException.custom_exception_handler'
 }
@@ -46,19 +39,10 @@ CORS_ORIGIN_REGEX_WHITELIST = (
     '^(https?://)?(\w+\.)?onrender\.com$',
     '^(http?://)?(\w+\.)?web\.onrender\.com$'
 )
-CORS_ALLOW_HEADERS = (
-    'x-requested-with',
-    'content-type',
-    'accept',
-    'access-token',
-    'app-client',
-    'HTTP_ACCESS_TOKEN',
-    'origin',
-    'authorization',
-    'responseType',
-    'contentType',
-    '*'
-)
+CORS_ALLOW_HEADERS = ["*"]
+
+
+CORS_ALLOW_ALL_ORIGINS = False
 
 
 CORS_ALLOWED_ORIGINS = [
